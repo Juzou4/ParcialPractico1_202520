@@ -18,8 +18,8 @@ import co.edu.uniandes.dse.ParcialPractico1_202520.repositories.PlanetaRepositor
 @Service
 public class PlanetaService {
 
-    // @Autowired
-    // private PlanetaRepository planetaRepository;
+    @Autowired
+    private PlanetaRepository planetaRepository;
 
     @Transactional
     public PlanetaEntity crearPlaneta(PlanetaEntity planeta) throws IllegalOperationException{
@@ -32,9 +32,9 @@ public class PlanetaService {
 
     }
 
-    return PlanetaRepository.save(planeta);
+    return planetaRepository.save(planeta);
 
-
+    }
 
     // private String nombre;
     // private int poblacionPlaneta;
